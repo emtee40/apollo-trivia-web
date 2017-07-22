@@ -1,9 +1,3 @@
-function submitValues() {
-  //get value
-  var selectedValue = document.querySelector('input[name = "answers"]:checked').value;
-  alert(selectedValue)
-}
-
 text = localStorage.getItem("questions");
 console.log("text : " + text)
 allQuestions = JSON.parse(text);
@@ -12,3 +6,16 @@ questions = allQuestions.questions
 var curQuestion = questions[0];
 console.log(curQuestion);
 console.log("the question " + curQuestion.question);
+console.log("answer0 " + curQuestion.answers[0]);
+setQuestions();
+
+function submitValues() {
+  //get value
+  var selectedValue = document.querySelector('input[name = "answers"]:checked').value;
+  alert(selectedValue)
+  setQuestions();
+}
+
+function setQuestions() {
+  document.getElementById("answer0").innerHTML = "testing123";
+}
