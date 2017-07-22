@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <script src="js/genQuestions.js"></script>
-    <script src="js/main.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <title>Apollo Trivia</title>
 
@@ -22,20 +21,27 @@
   </head>
   <body>
     <center><h1>Apollo Trivia</h1></center>
-    <p class="description">This is my Apollo Trivia App
+    <p id="question" class="description">This is my Apollo Trivia App</p>
+
     <form class="description" action ="">
-        <input type="radio" name="answers" value="answer0"> answer0<br>
-	<input type="radio" name="answers" value="answer1"> answer1<br>
-	<input type="radio" name="answers" value="answer2"> answer2<br>
-	<input type="radio" name="answers" value="answer3"> answer3<br>
-    </form>
+      <input type="radio" id="answer0id" name="answers" value="answer0">
+      <label for="answer0id">answer0</label><br>
+  
+      <input type="radio" id="answer1id" name="answers" value="answer1">
+      <label for="answer0id">answer1</label><br>
+  
+      <input type="radio" id="answer2id" name="answers" value="answer2">
+      <label for="answer0id">answer2</label><br>
+  
+      <input type="radio" id="answer3id" name="answers" value="answer3">
+      <label for="answer0id">answer3</label><br>
+  </form> 
     <br>
     <button onclick="submitValues();" type="button" class="btn btn-primary description">Submit</button>
-    </p>
 
 
 
-
+    <script src="js/main.js"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

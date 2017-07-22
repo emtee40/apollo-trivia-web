@@ -17,5 +17,6 @@ function submitValues() {
 }
 
 function setQuestions() {
-  document.getElementById("answer0").innerHTML = "testing123";
+  console.log("setting questions")
+  document.querySelector('#answer0id ~ label').innerHTML = 'testing123'; 
 }
