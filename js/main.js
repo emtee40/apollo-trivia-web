@@ -8,7 +8,7 @@ text = localStorage.getItem("questions");
 console.log("text : " + text)
 allQuestions = JSON.parse(text);
 console.log("allQuestions: " + allQuestions)
-people = allQuestions.people
-var curPerson = people[0];
-console.log(curPerson);
-console.log("the question " + curPerson.name);
+questions = allQuestions.questions
+var curQuestion = questions[0];
+console.log(curQuestion);
+console.log("the question " + curQuestion.question);
