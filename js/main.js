@@ -1,29 +1,69 @@
 text = localStorage.getItem("questions");
-console.log("text : " + text)
+//console.log("text : " + text)
 allQuestions = JSON.parse(text);
-console.log("allQuestions: " + allQuestions)
+//console.log("allQuestions: " + allQuestions)
 questions = allQuestions.questions
 var curQuestion = questions[0];
 console.log(curQuestion);
-console.log("the question " + curQuestion.question);
-console.log("answer0 " + curQuestion.answers[0]);
+//console.log("the question " + curQuestion.question);
+//console.log("answer0 " + curQuestion.answers[0]);
 setQuestions();
 
 function submitValues() {
-  //get value
-  var selectedValue = document.querySelector('input[name = "answers"]:checked').value;
-  alert(selectedValue)
+  isCorrect = false;
+  isCorrect = checkIfCorrect();
+  displayMessage(isCorrect); 
   setQuestions();
 }
 
 function setQuestions() {
-  curCorrectAnswer = curQuestion.answers[0]
-  answersRandomized = shuffle(curQuestion.answers)
+  curCorrectAnswer = curQuestion.answers[0];
+  arrBackup = curQuestion.answers.slice(0); 
+  answersRandomized = shuffle(curQuestion.answers);
   document.querySelector('#question').innerHTML = curQuestion.question;
   document.querySelector('#answer0id ~ label').innerHTML = curQuestion.answers[0]; 
   document.querySelector('#answer1id ~ label').innerHTML = curQuestion.answers[1];
   document.querySelector('#answer2id ~ label').innerHTML = curQuestion.answers[2];
   document.querySelector('#answer3id ~ label').innerHTML = curQuestion.answers[3];
+  correctAnswerNumber = curQuestion.answers.indexOf(curCorrectAnswer);
+  console.log(correctAnswerNumber);
+  curQuestion.answers = arrBackup;
+  console.log(curCorrectAnswer);
+}
+
+function displayMessage(correctOrNot) {
+  if (correctOrNot) {
+    alert("noice job boi");
+  }
+  else {
+    alert("bad boi");
+  }
+}
+
+function checkIfCorrect() {
+  // selected value is the value from the HTML element that the user selected
+  temp = false;
+  var selectedValue = document.querySelector('input[name = "answers"]:checked').value; 
+  console.log("selected value " + selectedValue); 
+
+  if (selectedValue==="answer0" && correctAnswerNumber===0){
+    console.log("answer is correct");
+    temp = true;
+  } 
+  if (selectedValue==="answer1" && correctAnswerNumber===1){
+    console.log("answer is correct");
+    temp = true;
+  }
+  if (selectedValue==="answer2" && correctAnswerNumber===2){
+    console.log("answer is correct");
+    temp = true;
+  }
+  if (selectedValue==="answer3" && correctAnswerNumber===3){
+    console.log("answer is correct");
+    temp = true;
+  }
+  return temp
+  
 }
 
 //stolen from https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
