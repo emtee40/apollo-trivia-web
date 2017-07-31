@@ -3,7 +3,7 @@ text = localStorage.getItem("questions");
 allQuestions = JSON.parse(text);
 //console.log("allQuestions: " + allQuestions)
 questions = allQuestions.questions
-var curQuestion = questions[1];
+var curQuestion = questions[Math.floor(Math.random()*questions.length)];
 console.log(curQuestion);
 //console.log("the question " + curQuestion.question);
 //console.log("answer0 " + curQuestion.answers[0]);
@@ -17,6 +17,7 @@ function submitValues() {
 }
 
 function setQuestions() {
+  curQuestion = questions[Math.floor(Math.random()*questions.length)];
   curCorrectAnswer = curQuestion.answers[0];
   arrBackup = curQuestion.answers.slice(0); 
   answersRandomized = shuffle(curQuestion.answers);
