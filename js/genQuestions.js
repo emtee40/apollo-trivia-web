@@ -2,7 +2,15 @@
 questions = { "questions":[ 
   {"question":"What were the first words spoken on the moon?", 
   "answers":[ "...one small step for a man, one giant leap for mankind", "The pledge of allegiance", "The preamble of the constitution", "Not known, the radio data failed"], 
-  "explanation":"\"...one small step for a man, one giant leap for mankind\" were the first words on the moon, spoken my Neil Armstrong. He claims he siad \"...one small step for a man, AND ONE giant leap for mankind\", but the radio did not pick up on it.", "source":"https://www.nasa.gov/mission_pages/apollo/missions/apollo11.html" }]};
+  "explanation":"\"...one small step for a man, one giant leap for mankind\" were the first words on the moon, spoken my Neil Armstrong. He claims he siad \"...one small step for a man, AND ONE giant leap for mankind\", but the radio did not pick up on it.",
+  "source":"https://www.nasa.gov/mission_pages/apollo/missions/apollo11.html" },
+
+  { "question":"What was the first Apollo Mission",
+  "answers":[ "Apollo 1","Apollo 0", "Apollo 11", "Apollo 10"],
+  "explanation":"Apollo 1 was the first mission",
+  "source":"https://www.nasa.gov/mission_pages/apollo/missions/index.html"}
+  ]};
+
 
 
 //finalize
