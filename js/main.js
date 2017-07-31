@@ -3,7 +3,7 @@ text = localStorage.getItem("questions");
 allQuestions = JSON.parse(text);
 //console.log("allQuestions: " + allQuestions)
 questions = allQuestions.questions
-var curQuestion = questions[0];
+var curQuestion = questions[1];
 console.log(curQuestion);
 //console.log("the question " + curQuestion.question);
 //console.log("answer0 " + curQuestion.answers[0]);
@@ -33,11 +33,13 @@ function setQuestions() {
 
 function displayMessage(correctOrNot) {
   if (correctOrNot) {
-    alert("noice job boi");
+    temp = " correct\n "
   }
   else {
-    alert("bad boi");
+    temp = " incorrect\n "
   }
+  alertStr = temp + curQuestion.explanation
+  alert(alertStr);
 }
 
 function checkIfCorrect() {
