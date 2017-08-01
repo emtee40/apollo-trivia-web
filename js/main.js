@@ -10,6 +10,7 @@ console.log(curQuestion);
 setQuestions();
 
 function submitValues() {
+  console.log("displaying message");
   isCorrect = false;
   isCorrect = checkIfCorrect();
   displayMessage(isCorrect); 
@@ -33,6 +34,7 @@ function setQuestions() {
 }
 
 function displayMessage(correctOrNot) {
+  console.log("displaying message");
   if (correctOrNot) {
     temp = " correct\n "
   }
@@ -40,7 +42,7 @@ function displayMessage(correctOrNot) {
     temp = " incorrect\n "
   }
   alertStr = temp + curQuestion.explanation
-  alert(alertStr);
+  document.getElementById("correctOrNotBody").innerHTML = alertStr;
 }
 
 function checkIfCorrect() {
