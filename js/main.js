@@ -71,6 +71,11 @@ function checkIfCorrect() {
   
 }
 
+function viewSource() {
+ var win = window.open(curQuestion.source, '_blank') 
+ win.focus();
+}
+
 //stolen from https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
