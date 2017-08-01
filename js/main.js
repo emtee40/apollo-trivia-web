@@ -14,7 +14,7 @@ function submitValues() {
   isCorrect = false;
   isCorrect = checkIfCorrect();
   displayMessage(isCorrect); 
-  setQuestions();
+//  setQuestions();
 }
 
 function setQuestions() {
