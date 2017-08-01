@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <script src="js/genQuestions.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>Apollo Trivia</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <center><h1>Apollo Trivia</h1></center>
+    <p id="question" class="description">This is my Apollo Trivia App</p>
+
+    <form class="description" action ="">
+      <input type="radio" id="answer0id" name="answers" value="answer0">
+      <label for="answer0id">answer0</label><br>
+  
+      <input type="radio" id="answer1id" name="answers" value="answer1">
+      <label for="answer0id">answer1</label><br>
+  
+      <input type="radio" id="answer2id" name="answers" value="answer2">
+      <label for="answer0id">answer2</label><br>
+  
+      <input type="radio" id="answer3id" name="answers" value="answer3">
+      <label for="answer0id">answer3</label><br>
+  </form> 
+    <br>
+<!-- Button trigger modal -->
+<button onClick="submitValues();" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Submit
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div id="correctOrNotBody" class="modal-body">
+        "oops! Looks like something went wrong"
+      </div>
+      <div class="modal-footer">
+        <button onclick="viewSource();"type="button" class="btn btn-default">View Source</button>
+        <button onclick="setQuestions();" type="button" class="btn btn-primary" data-dismiss="modal">Next Question</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <script src="js/main.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+   
+  </body>
+</html>
