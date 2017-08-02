@@ -36,10 +36,10 @@ function setQuestions() {
 function displayMessage(correctOrNot) {
   console.log("displaying message");
   if (correctOrNot) {
-    temp = " correct\n "
+    temp = " Correct: "
   }
   else {
-    temp = " incorrect\n "
+    temp = " Incorrect: "
   }
   alertStr = temp + curQuestion.explanation
   document.getElementById("correctOrNotBody").innerHTML = alertStr;
